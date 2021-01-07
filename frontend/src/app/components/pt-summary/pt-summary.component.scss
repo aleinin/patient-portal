@@ -1,0 +1,43 @@
+.pt-pic {
+  width: 150px;
+  height: 150px;
+}
+
+.pt-sum {
+  display: flex;
+  width: 100%;
+}
+
+.pt-sum-info {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.pt-info-and-edit {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.pt-info-and-edit h3 {
+  margin-bottom: 0px;
+}
+
+.form-controls {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.sum-and-edit {
+
+}
+
+.info-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-title h2 {
+  margin-top: 0;
+}

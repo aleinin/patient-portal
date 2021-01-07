@@ -1,0 +1,27 @@
+<div class="all-but-footer">
+  <app-main-search
+    (createNew)="setNewPatientState()"
+    [patients]="patients$ | async"
+  ></app-main-search>
+  <div *ngIf="columns$ | async as columns" [ngSwitch]="state" class="content">
+    <div *ngSwitchCase="'patient'">
+      <app-pt-page
+        [columns]="columns"
+        [patient]="selectedPatient$ | async"
+      ></app-pt-page>
+    </div>
+    <div *ngSwitchCase="'new'">
+      <app-new-patient
+        (addRow)="saveNewPatient($event)"
+        (closeDialog)="hide()"
+        [cols]="columns.details"
+      ></app-new-patient>
+    </div>
+    <div *ngSwitchDefault class="splash">
+      <img alt="here" class="placeholder" src="../../assets/star.png">
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <a class="source-code" href="https://github.com/patient-portal">Source Code | Created By Aleinin</a>
+</footer>

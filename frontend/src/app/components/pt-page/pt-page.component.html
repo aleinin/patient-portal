@@ -1,0 +1,14 @@
+<div>
+  <div class="pt-sum-comp">
+    <app-pt-summary
+      [columns]="columns.details"
+      [info]="patient.info"
+      (deletePatient)="deletePatient()"
+      (editDetails)="editDetails($event)"
+    ></app-pt-summary>
+  </div>
+  <app-pt-tabs
+    [columns]="columns"
+    [patient]="patient"
+  ></app-pt-tabs>
+</div>

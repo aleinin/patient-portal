@@ -1,0 +1,11 @@
+<app-form
+  (addRow)="saveNewPatient($event)"
+  (closeDialog)="hide()"
+  [cols]="cols"
+  [isPatient]="false"
+  [display]="true"
+  [headerTitle]="'New Patient'"
+  [forbiddenNames]="patientNames$ | async"
+  [new]="true"
+  [row]="{}"
+></app-form>

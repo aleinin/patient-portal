@@ -1,0 +1,34 @@
+<p-card>
+  <div class="info-title">
+    <h2>{{info.name}}</h2>
+    <p-button (click)="show()" label="Edit"></p-button>
+  </div>
+  <div class="pt-sum">
+    <div>
+      <img alt="logo" class="pt-pic" src="../../../assets/noimg.jpg">
+    </div>
+    <div class="pt-info-and-edit">
+        <h3>Patient Summary</h3>
+      <ul class="pt-sum-info">
+        <li><b>Age:</b> {{info.age}}</li>
+        <li><b>Sex:</b> {{info.sex}}</li>
+        <li><b>Pronouns:</b> {{info.pronouns}}</li>
+        <li><b>Blood Type:</b> {{info.bloodType}}</li>
+        <li><b>Race:</b> {{info.race}}</li>
+      </ul>
+    </div>
+  </div>
+</p-card>
+<app-form
+  *ngIf="display"
+  [new]="false"
+  [isPatient]="true"
+  [cols]="columns"
+  [display]="display"
+  [row]="info"
+  [forbiddenNames]="patientNames$ | async"
+  headerTitle="Patient Details"
+  (editRow)="edit($event)"
+  (deleteRow)="delete()"
+  (closeDialog)="hide()"
+></app-form>

@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+.ui-tabview-panels {
+  padding: 0 !important;
+}
+
+body {
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.ui-corner-top {
+  @media screen and (max-width: 750px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
